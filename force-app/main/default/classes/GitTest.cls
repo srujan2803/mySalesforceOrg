@@ -3,7 +3,7 @@ public with sharing class GitTest {
 
         system.debug('hello');
         system.debug('hello world');
-        system.debug('conflict check');
+        system.debug('conflict check2');
 
     }
 }
