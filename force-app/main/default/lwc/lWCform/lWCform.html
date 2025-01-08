@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="My Blue Card">
+        <div style="background-color: #1E3A8A; color: #ffffff; padding: 20px; border-radius: 5px; margin: 0; overflow: hidden;" class="slds-grid slds-gutters">
+            
+            <!-- First Column - Editable Name -->
+            <div class="slds-col" style="border: solid 1px white; padding: 10px; display: flex; justify-content: center; align-items: center;">
+                <p 
+                    contenteditable="true" 
+                    style="color: #ffffff; text-align: center; font-size: 1.5rem;" 
+                    oninput={handleNameChange}>
+                    {name}
+                </p>
+            </div>
+
+            <!-- Second Column - Editable Image URL with Save and Cancel buttons -->
+            <div class="slds-col" style="border: solid 1px white; padding: 10px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <input 
+                    type="text" 
+                    value={imageURL} 
+                    onchange={handleImageURLChange} 
+                    placeholder="Enter Image URL" 
+                    style="width: 80%; padding: 5px; margin-bottom: 10px;" />
+                
+                <img src={imageURL} alt="User Image" style="max-width: 150px; max-height: 150px; margin-bottom: 10px; border-radius: 5px;" />
+
+                <!-- Save and Cancel buttons -->
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
+                </div>
+            </div>
+
+            <!-- Third Column - Static Content (No Change) -->
+            <div class="slds-col" style="border: solid 1px white; padding: 10px;">
+                <p>Column 3 content</p>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

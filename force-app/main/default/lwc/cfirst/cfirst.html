@@ -1,0 +1,22 @@
+<template>
+   <lightning-card>
+              <!-- Brand variant: Identifies the primary action in a group of buttons -->
+              <h1 id="firstheading">{disc}</h1>
+              <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+      
+              <ul>
+               <template for:each={list} for:item=item>
+                  <li key={index}>
+                     {item}
+                  </li>
+
+               </template>
+              </ul>
+
+
+   </lightning-card>
+   
+    
+    
+    
+</template>

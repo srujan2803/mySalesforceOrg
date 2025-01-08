@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validateAccount</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( rating__c ,&apos;hot&apos;)&amp;&amp; ISPICKVAL(  Industry__c ,&apos;Agriculture&apos;)&amp;&amp; ISNULL( Revenue__c )</errorConditionFormula>
+    <errorDisplayField>Revenue__c</errorDisplayField>
+    <errorMessage>Revenue should not be null for agriculture with rating hot</errorMessage>
+</ValidationRule>

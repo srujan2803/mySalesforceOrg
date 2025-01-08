@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <h1>ParentComponent</h1>
+        <lightning-input class="myclass" label="enter value to pass the data" onchange={ParentInputHandle}></lightning-input>
+
+        <lightning-button label="data to c2" variant="brand" onclick={PatrentClickHandle}></lightning-button>
+        
+        <c-parent-to-child-c from-parent={passingData}></c-parent-to-child-c>
+
+
+
+        <c-parent-to-child-C2 message-after-click-in-parent={passingDataToC2} ></c-parent-to-child-C2>
+    </lightning-card>
+   
+    
+</template>

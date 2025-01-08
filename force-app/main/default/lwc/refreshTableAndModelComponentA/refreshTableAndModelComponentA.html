@@ -1,0 +1,62 @@
+<template>
+    <lightning-card>
+      <div>
+        <template if:true={conList}>
+          <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <tr class="slds-line-height_reset">
+              <th class="" scope="col">
+                <b> <div class="slds-truncate" title="Name">Account Name</div></b>
+              </th>
+              <th class="" scope="col">
+                <b><div class="slds-truncate" title="Name">First Name</div></b>
+              </th>
+              <th class="" scope="col">
+                <b><div class="slds-truncate" title="Name">Last Name</div></b>
+              </th>
+              <th class="" scope="col">
+                <b><div class="slds-truncate" title="Name">Phone</div></b>
+              </th>
+              <th class="" scope="col">
+                <b><div class="slds-truncate" title="Name">Email</div></b>
+              </th>
+              <th class="" scope="col">
+                <b> <div class="slds-truncate" title="Name">Action</div></b>
+              </th>
+            </tr>
+            <tbody>
+              <template for:each={conList} for:item="item" for:index="index">
+                <tr key={item.Id}>
+                    <td>{item.Account.Name}</td>
+                    <td>{item.FirstName}</td>
+                    <td>{item.LastName}</td>
+                    <td>{item.Phone}</td>
+                    <td>{item.Email}</td>
+                    <td>
+                      
+                        <lightning-button-icon
+                            icon-name="utility:edit"
+                            alternative-text="Edit"
+                            title="Edit"
+                            variant="bare"
+                            onclick={handleclickedit}
+                            data-id={item.Id} 
+                        ></lightning-button-icon>
+                        <template if:true = {showModal}>
+                          <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                
+                                 ontoclosepopup={closeMyPopup} contactrecid={contactRecId}></c-contact-form>
+                              </div>
+                           </div>
+                        </section>
+                         </template>
+                    </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </template>
+      </div>
+    </lightning-card>
+  </template>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Short_Term_Lease_Month_to_Month</fullName>
+    <active>true</active>
+    <label>Short Term Lease(Month to Month)</label>
+    <picklistValues>
+        <picklist>Lease_duration_Type__c</picklist>
+        <values>
+            <fullName>1 month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lease_status__c</picklist>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

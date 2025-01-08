@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRODUCT__c</fullName>
+    <externalId>false</externalId>
+    <label>PRODUCT</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MOUSE</fullName>
+                <default>false</default>
+                <label>MOUSE</label>
+            </value>
+            <value>
+                <fullName>PENDRIVES</fullName>
+                <default>false</default>
+                <label>PENDRIVES</label>
+            </value>
+            <value>
+                <fullName>KEYBOARDS</fullName>
+                <default>false</default>
+                <label>KEYBOARDS</label>
+            </value>
+            <value>
+                <fullName>BLUETOOTH</fullName>
+                <default>false</default>
+                <label>BLUETOOTH</label>
+            </value>
+            <value>
+                <fullName>EX HD</fullName>
+                <default>false</default>
+                <label>EX HD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

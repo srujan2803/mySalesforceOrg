@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact Record Form">
+        <div class="slds-m-around_medium">
+            <lightning-record-form
+                record-id={contactrecid}
+                object-api-name="Contact"
+                layout-type="Full"
+                columns="2"
+                mode="edit"
+                onsuccess={handleSuccess}
+                oncancel={handleCancel}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

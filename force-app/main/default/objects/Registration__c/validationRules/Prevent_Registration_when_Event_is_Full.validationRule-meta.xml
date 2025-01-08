@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Registration_when_Event_is_Full</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Event__r.Status__c, &quot;Full&quot;),
+    ISNEW()
+)</errorConditionFormula>
+    <errorMessage>Event is Full</errorMessage>
+</ValidationRule>

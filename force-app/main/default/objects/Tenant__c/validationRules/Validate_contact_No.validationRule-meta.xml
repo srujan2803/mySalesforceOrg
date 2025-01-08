@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_contact_No</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(
+(BEGINS(Contact_Informatiom__c, &apos;8&apos; )|| BEGINS(Contact_Informatiom__c, &apos;7&apos;)|| BEGINS(Contact_Informatiom__c, &apos;9&apos;)) &amp;&amp;
+ LEN(Contact_Informatiom__c) = 10
+
+
+)</errorConditionFormula>
+    <errorDisplayField>Contact_Informatiom__c</errorDisplayField>
+    <errorMessage>contact Number equal to 10 numbers and starts with 7 or 8 or 9</errorMessage>
+</ValidationRule>

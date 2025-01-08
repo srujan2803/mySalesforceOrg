@@ -1,0 +1,9 @@
+<template>
+
+    <lightning-card>
+    {entedtext}
+        <lightning-input label ="next text which you want to pass to child" onchange={handlingChange}></lightning-input>
+    </lightning-card>
+    <c-child-component value-from-parent={entedtext}></c-child-component>
+    
+</template>
